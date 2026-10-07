@@ -1,0 +1,162 @@
+.title {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.filters {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.filterHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.mode {
+  display: flex;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modeBtn,
+.modeActive {
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.modeActive {
+  background: var(--text);
+  color: var(--surface);
+}
+
+.clear {
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 0.85rem;
+  border: none;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+}
+
+.chipOn {
+  color: #fff;
+  border-color: transparent;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 16px 0 12px;
+}
+
+.empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: radial-gradient(circle at 50% 60%, var(--bg) 0 55%, transparent 56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+
+.id {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.types {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}

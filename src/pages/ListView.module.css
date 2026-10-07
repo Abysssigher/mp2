@@ -1,0 +1,148 @@
+.title {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.search {
+  flex: 1 1 280px;
+  padding: 12px 16px;
+  font: inherit;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search:focus {
+  border-color: var(--accent);
+}
+
+.sortLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.select {
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.toggle {
+  display: flex;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.toggleBtn,
+.toggleActive {
+  padding: 10px 14px;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.toggleActive {
+  background: var(--accent);
+  color: #fff;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 16px 0 8px;
+}
+
+.empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 56px 56px 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
+}
+
+.row:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.sprite {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+}
+
+.id {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.types {
+  display: flex;
+  gap: 6px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 220px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 48px 1fr auto;
+  }
+  .id,
+  .meta {
+    display: none;
+  }
+}

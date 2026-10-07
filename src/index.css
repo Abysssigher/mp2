@@ -1,0 +1,52 @@
+/* Minimal reset (normalize-style) + design tokens */
+:root {
+  --bg: #f4f4f7;
+  --surface: #ffffff;
+  --text: #1d1d24;
+  --muted: #6b6b78;
+  --border: #e3e3ea;
+  --accent: #e3350d;
+
+  font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15151b;
+    --surface: #1f1f28;
+    --text: #ececf1;
+    --muted: #9a9aa8;
+    --border: #2e2e3a;
+    --accent: #ff4d2e;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
